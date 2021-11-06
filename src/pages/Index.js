@@ -85,7 +85,9 @@ return (
             />
 <input type="submit" value="Create Cheese" />
         </form>
-        {props.cheese ? loaded() : loading()}
+        <div className="cheeseList"> 
+            {props.cheese ? loaded() : loading()}
+        </div>
     </section>
 ); 
 } 

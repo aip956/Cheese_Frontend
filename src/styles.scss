@@ -62,3 +62,10 @@ img {
     margin: 10px;
     background-color: lightgray;
 }
+
+.cheeseList{
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
