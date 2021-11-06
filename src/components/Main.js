@@ -4,12 +4,36 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 
 function Main(props){
+const [cheese, setCheese] = useState(null);
+
+const URL = "https://i-want-cheese.herokuapp.com/cheese";
+
+const getCheese = async () => {
+    const response = await fetch(URL);
+    const data = await response.json();
+    setCheese(data);
+};
+
+const createCheese = async (cheese) => {
+    // Make post request to create cheese!
+    await fetch(URL, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+            },
+            body:JSON.stringify(cheese),
+    });
+    // Update cheese list
+    getCheese();
+};
+
+useEffect(() => getCheese(), []);
 
     return (
         <main>
             <Switch>
                 <Route exact path="/">
-                    <Index />
+                    <Index cheese={cheese} createCheese={createCheese} />
                 </Route>
                 
                 <Route
