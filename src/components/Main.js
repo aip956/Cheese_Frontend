@@ -25,6 +25,7 @@ const createCheese = async (cheese) => {
     });
     // Update cheese list
     getCheese();
+    console.log(getCheese);
 };
 
 useEffect(() => getCheese(), []);

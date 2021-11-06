@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 
 function Index(props){
-// State to hold fromData
+// State to hold formData
 const [newForm, setNewForm] = useState({
     name: "",
     countryOfOrigin: "",
@@ -29,27 +29,28 @@ const handleSubmit = (event) => {
 // Loaded function
 const loaded = () => {
     
-    const cheesesList =
-    newForm.map((cheese) => (
-        <div className="cheese">
-            <h1>{cheese.name}
-            </h1>
-            <img src={cheese.image} />
-            <h2>{cheese.countryOfOrigin}</h2>
-        </div>
-    ))
-    return (
-        <div className="cheeseList">
-            {}
-        </div></div>
-    )
-    // return props.cheese.map((cheese) => (
-    //     <div key={cheese._id} className="cheese" >
-    //         <Link to={`/cheese/${cheese._id}`}><h1>{cheese.name}</h1></Link>
-    //         <img src={cheese.image} alt={cheese.name} />
-    //         <h3>{cheese.title}</h3>
+    // const cheesesList =
+    // newForm.map((cheese) => (
+    //     console.log(newForm)
+    //     <div className="cheese">
+    //         <h1>{cheese.name}
+    //         </h1>
+    //         <img src={cheese.image} />
+    //         <h2>{cheese.countryOfOrigin}</h2>
     //     </div>
-    // ));
+    // ))
+    // return (
+    //     <div className="cheeseList">
+    //         {cheesesList}
+    //     </div>
+    // )
+    return props.cheese.map((cheese) => (
+        <div key={cheese._id} className="cheese" >
+            <Link to={`/cheese/${cheese._id}`}><h1>{cheese.name}</h1></Link>
+            <img src={cheese.image} alt={cheese.name} />
+            <h3>{cheese.title}</h3>
+        </div>
+    ));
    
 };
 
