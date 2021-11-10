@@ -37,7 +37,7 @@ const removeCheese = () => {
       <h1>{cheeseIt.name}</h1>
       <h2>{cheeseIt.countryOfOrigin}</h2>
       <img src={cheeseIt.image} alt={cheeseIt.name} />
-      <button onClick={removeCheese} id="delete">DELETE CHEESE</button>
+      
 
       <form onSubmit={handleSubmit}>
         <input
@@ -64,6 +64,7 @@ const removeCheese = () => {
         <input type="submit" value="Update Cheese" />
 
       </form>
+      <button onClick={removeCheese} id="delete">Delete Cheese</button>
     </div>
     );
   } 

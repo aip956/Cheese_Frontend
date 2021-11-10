@@ -33,28 +33,55 @@ nav {
     }
   }
 }
-form {
-    margin: 20px;
- 
+
+// --------------------------
+// Form
+// --------------------------
+section, div {
+  form {
+    input {
+      @include white-text-black-bg;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 10px 10px 5px gray;
+      
+      &:hover{
+        border: solid darkblue 5px;
+        padding: 5px;
+        transition: 0.2s;
+      }
+    
+  }
 }
-input {
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 10px 5px 5px gray;
+} 
+
+
+button#delete {
+  @include white-text-black-bg;
+  display: block;
+  margin: auto;
+  font-size: 1.3em;
+  padding: 10px;
 }
 
-input:hover {
-    border: solid darkblue 5px;
-padding: 5px;
-transition: 0.2s;
-}
+//--------------------------
+//images
+//--------------------------
+
 
 img {
     width: 200px;
+    height: 200px;
     border: solid darkslategray 3px;
     border-radius: 5px;
+    object-fit: cover;
 }
 
+//--------------------------
+//Cheese display
+//--------------------------
 .cheese {
     border-radius: 5px;
     border: solid black 3px;
