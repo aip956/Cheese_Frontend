@@ -28,6 +28,26 @@ const createCheese = async (cheese) => {
     console.log(getCheese);
 };
 
+const updateCheese = async (cheese, id) => {
+    // Make a put request to update cheese
+    await fetch(URL + id, {
+        method: "put",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(cheese)
+    })
+    getCheese()
+}
+
+const deleteCheese = async (id) => {
+    //  Make the delete request
+    await fetch(URL + id, {
+        method: "delete"
+    })
+    getCheese()
+}
+
 useEffect(() => getCheese(), []);
 
     return (
@@ -42,6 +62,9 @@ useEffect(() => getCheese(), []);
                 render={(rp) => (
                 <Show
                 {...rp}
+                cheese={cheese}
+                updateCheese={updateCheese}
+                deleteCheese={deleteCheese}
                 />
                 )}
                 />
