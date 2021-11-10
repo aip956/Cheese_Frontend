@@ -7,7 +7,7 @@ function Show(props){
   const cheese = props.cheese
   // Find the cheese to show
   const cheeseIt = cheese.find((singleCheese) => {
-  return singleCheese._id ===id
+  return singleCheese._id === id
 })
 
 // State for our form
