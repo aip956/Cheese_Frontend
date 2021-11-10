@@ -46,7 +46,7 @@ section, div {
       margin: 10px;
       border-radius: 5px;
       box-shadow: 10px 10px 5px gray;
-      
+
       &:hover{
         border: solid darkblue 5px;
         padding: 5px;
@@ -62,7 +62,7 @@ button#delete {
   @include white-text-black-bg;
   display: block;
   margin: auto;
-  font-size: 1.3em;
+  font-size: 1.0em;
   padding: 10px;
 }
 
