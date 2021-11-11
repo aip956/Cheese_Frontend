@@ -48,7 +48,8 @@ return (
             <input
             type="text"
             value={newForm.name}
-            name="name"
+            name="name" 
+            required
             placeholder="name"
             onChange={handleChange}
             />
@@ -57,6 +58,7 @@ return (
             type="text"
             value={newForm.countryOfOrigin}
             name="countryOfOrigin"
+            required
             placeholder="countryOfOrigin"
             onChange={handleChange}
             />
@@ -65,6 +67,7 @@ return (
             type="text"
             value={newForm.image}
             name="image"
+            required
             placeholder="image URL"
             onChange={handleChange}
             />

@@ -64,6 +64,13 @@ button#delete {
   margin: auto;
   font-size: 1.0em;
   padding: 10px;
+  border-radius: 5px;
+  background-color: red;
+  &:hover{
+    border: solid darkblue 5px;
+    padding: 5px;
+    transition: 0.2s;
+  }
 }
 
 //--------------------------
