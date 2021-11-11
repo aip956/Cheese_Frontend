@@ -95,6 +95,10 @@ img {
     width: 25%;
     margin: 10px;
     background-color: lightgray;
+    transition: transform 0.2s;
+    &:hover {
+     transform: scale(1.1); 
+    }
 }
 
 .cheeseList{
